@@ -1,0 +1,70 @@
+package Editora;
+
+
+public class Lista {
+
+	public Object item;
+	public Lista proximo;
+	private static int numItens;
+	
+	public Lista (Object item) {
+		this.item = item; 
+		numItens++;
+	}
+	
+	public Lista() {
+		numItens = 0;
+	}
+
+	public int getNumItens () {
+		return numItens;
+	}
+	
+	public void insereItem (Object item) {
+		if (this.item == null) {
+			this.item = item;
+			numItens++;
+		} else {
+		
+		Lista aux = this;
+		
+		while (aux.proximo != null) {
+			aux = aux.proximo;
+		}
+		aux.proximo = new Lista (item);
+		}
+		System.out.println("Objeto inserido");
+	}
+	
+	public void retiraItem (Object item) {
+		if (this.item == item) {
+			this.item = this.proximo;
+		} else {
+			Lista aux = this;
+		
+			while (aux.proximo != null && aux.proximo.item != item) {
+				aux = aux.proximo;
+			}
+			if (aux.proximo == null) {
+				System.out.println("Objeto não encontrado");
+			} else {
+				aux.proximo = aux.proximo.proximo;
+				numItens--;
+				System.out.println("Objeto retirado");
+			}
+		}
+	}
+	 
+	public void imprime () {
+		if (item != null) {
+			System.out.println(item);
+			Lista aux = proximo;
+			while (aux != null) {
+				System.out.println(aux.item);
+				aux = aux.proximo;
+			} 
+		} else {
+			System.out.println("Não há itens inseridos");
+		}
+	}
+}

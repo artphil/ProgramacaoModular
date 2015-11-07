@@ -1,0 +1,3 @@
+1442679737898	Convert local variable 'opcao' to field
+1442681909763	Encapsulate field 'numero'
+1442682005511	Encapsulate field 'digito'

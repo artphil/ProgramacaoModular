@@ -1,0 +1,20 @@
+package Editora;
+
+public class Etiqueta extends Item{
+	private Assinatura assinat;
+	
+	public Etiqueta(Assinatura assinat) {
+		setAssinat(assinat);
+		setChave(assinat.getChave());
+		
+	}
+
+	public Assinatura getAssinat() {
+		return assinat;
+	}
+
+	public void setAssinat(Assinatura assinat) {
+		this.assinat = assinat;
+	}
+
+}

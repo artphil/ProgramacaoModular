@@ -1,0 +1,67 @@
+package Editora;
+
+import java.sql.Date;
+
+import javax.swing.JOptionPane;
+
+public class Sistema {
+
+	public static Editora editora = new Editora ();
+	public static Lista listaCliente = new Lista ();
+	public static Lista listaPublic = new Lista ();
+	public static Lista listaAssinat = new Lista ();
+	public static Lista listaEtiqueta = new Lista ();
+	
+	public static int[] opcao = new int[2];
+	public static int[] limite = {3, 3};
+	public static String[] mensagOpcao = new String[2];
+	
+	mensagOpcao[0] = "Digite a opção desejada\n"
+					+ "1.Inserir Publicação\n"
+					+ "2.Inserir Cliente\n"
+					+ "3.Inserir Assinatura\n"
+					+ "0.Sair";
+	mensagOpcao[1] = " ";
+	
+	public static void main(String[] args) {
+		editora.setNome ("SN Publicações");
+		editora.setCnpj("2014.262.885-55");
+		editora.setEndereco("Av. Ubatuba, 724 - Caxias, RN");
+		
+		System.out.println("Sistema iniciado\n" + editora);
+		
+		verificaOpcao (0);
+		
+		while (opcao[0] != 0) {
+			if (opcao[0] == 1) {
+				inserePublic ();
+			}
+			
+			verificaOpcao (0);
+		}
+		
+	
+		
+	}
+	
+	public static void verificaOpcao (int indice) {
+		String entrada = JOptionPane.showInputDialog(mensagOpcao[indice]);
+		
+		opcao[indice] = Integer.parseInt(entrada);
+		
+		if (opcao[indice] < 0 || opcao[indice] > limite[indice]) {
+			opcao[indice] = 0;
+		}
+	}
+	
+	public static void inserePublic () {
+		Publicacao publicacao = new Publicacao ();
+		publicacao.setNome();
+		publicacao.setPeriodic();
+		publicacao.setEdicaoAtual();
+		publicacao.setUltimaPub();
+		
+		listaPublic.insereItem(publicacao);
+	}
+
+}

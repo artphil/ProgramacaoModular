@@ -1,0 +1,6 @@
+package Editora;
+
+public class Etiqueta {
+	private Assinatura assinat;
+
+}

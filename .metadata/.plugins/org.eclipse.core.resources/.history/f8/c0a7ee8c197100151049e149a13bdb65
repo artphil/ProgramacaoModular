@@ -1,0 +1,9 @@
+package Editora;
+
+public class Assinatura {
+	private Publicacao periodico;
+	private int edicaoInicial;
+	private int numeroAssinat;
+	private Cliente assinante;
+
+}

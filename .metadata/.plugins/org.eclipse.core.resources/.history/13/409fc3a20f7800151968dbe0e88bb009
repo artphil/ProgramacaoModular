@@ -1,0 +1,47 @@
+package Editora;
+
+import javax.swing.JOptionPane;
+
+public class Cliente {
+	private String nome;
+	private String cpf;
+	private String endereco;
+	private String telefone;
+	
+	public String getNome() {
+		return nome;
+	}
+	
+	public void setNome() {
+		this.nome = JOptionPane.showInputDialog("Nome do cliente");
+	}
+	
+	public String getCPF() {
+		return cpf;
+	}
+	
+	public void setCPF() {
+		this.cpf = JOptionPane.showInputDialog("CPF do cliente");
+	}
+	
+	public String getEndereco() {
+		return endereco;
+	}
+	
+	public void setEndereco() {
+		this.endereco = JOptionPane.showInputDialog("Endereço do cliente");
+	}
+	
+	public String getTelefone() {
+		return telefone;
+	}
+	
+	public void setTelefone() {
+		this.telefone = JOptionPane.showInputDialog("Telefone do cliente");
+	}
+	
+	public String toString () {
+		return "Cliente:	" + nome + "CPF:	" + cpf + "Endereço:	" + endereco + "Telefone:	" + telefone;
+	}
+	
+}

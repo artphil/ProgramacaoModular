@@ -1,0 +1,73 @@
+package Editora;
+
+
+public class Lista {
+
+	public Item item;
+	public Lista proximo;
+	private static int numItens;
+	
+	public Lista (Item item) {
+		this.item = item; 
+		numItens++;
+	}
+	
+	public Lista() {
+		numItens = 0;
+	}
+
+	public int getNumItens () {
+		return numItens;
+	}
+	
+	public void insereItem (Item item) {
+		
+		Lista aux = this;
+		
+		while (aux.proximo != null) {
+			aux = aux.proximo;
+		}
+		aux.proximo = new Lista (item);
+		numItens++;
+		System.out.println("Objeto inserido");
+	}
+	
+	public void retiraItem (Item item) {
+		
+		Lista aux = this;
+	
+		while (aux.proximo != null && aux.proximo.item != item) {
+			aux = aux.proximo;
+		}
+		if (aux.proximo == null) {
+			System.out.println("Objeto não encontrado");
+		} else {
+			aux.proximo = aux.proximo.proximo;
+			numItens--;
+			System.out.println("Objeto retirado");
+		}
+		
+	}
+	 
+	public void imprime () {
+		if (proximo != null) {
+			
+			Lista aux = proximo;
+			while (aux != null) {
+				System.out.println(aux.item);
+				aux = aux.proximo;
+			} 
+		} else {
+			System.out.println("Não há itens inseridos");
+		}
+	}
+	
+	public Item Busca (String nome) {
+		Lista aux = proximo;
+		while (aux != null && !(nome.equals(aux.item.getChave())))
+			aux = aux.proximo;
+		return aux.item;
+		}
+
+
+}

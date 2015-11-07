@@ -1,0 +1,12 @@
+package Editora;
+
+import java.sql.Date;
+
+public class Publicacao {
+	private String nome;
+	private int edicaoAtual;
+	private String periodic;
+	private Date ultimaPub;
+
+	
+}
