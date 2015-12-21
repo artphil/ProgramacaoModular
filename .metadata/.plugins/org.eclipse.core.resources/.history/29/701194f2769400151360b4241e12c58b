@@ -1,0 +1,26 @@
+package Testes;
+
+import Pessoas.*;
+import junit.framework.*;
+
+public class PessoaTeste extends TestCase
+{
+	public void CostrutorTeste ()
+	{
+		Pessoa pessoa = new Pessoa ();
+		pessoa.setNome("João do Carmo");
+		pessoa.setEndereco("Rua Araribá, 131");
+		pessoa.setCPF("321.654.987-88");
+		pessoa.setDataNasc("20/11/1956");
+		pessoa.setEmail("joao@domain.com");
+		pessoa.setIdentidade("MG16.654.98");
+		pessoa.setTelefone("96546-5485");
+		
+		assertEquals ( "João do Carmo", pessoa.getNome(), 0 );
+	}
+	
+	public void imprime()
+	{
+		System.out.println( pessoa.toString() );
+	}
+}

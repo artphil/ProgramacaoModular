@@ -1,0 +1,13 @@
+package Testes;
+
+
+
+public class geraTestes {
+
+	public static void main(String[] args) 
+	{
+		TestePessoa pessoa = new TestePessoa();
+		pessoa.imprime();
+	}
+
+}

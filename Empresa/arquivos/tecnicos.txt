@@ -1,0 +1,5 @@
+#1000#Aguardando#N/A#N/A#N/A#N/A#N/A#N/A#0#
+#1001#Ricardo Tadeu#ric31@sis.com#Rua Carangola,22#3131-5566#19/11/1946#321456885-65#m2.653.984#0#
+#1002#Guilherme Gonçalves#gg82@sis.com#Rua Canpo Largo,122#3256-6521#31/07/1950#665214578-44#m5.457.874#2#
+#1003#João Carvalho#joaocv@jjservice.com#Rua Um, 205 ap 106, Boa Vista - SP#(11)2131-2264#19/05/1966#321.654.987.55#123.654.98#4#
+#1004#Marcos Almeida#marcal@oi.com.br#Av Caramba Meu, 21 - Sem Peixe MG#(36)32165478#22/04/1964#15216348977#11211322#3#

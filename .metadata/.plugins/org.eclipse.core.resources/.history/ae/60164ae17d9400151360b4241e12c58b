@@ -1,0 +1,14 @@
+package Tests;
+
+import Servicos.*;
+import junit.framework.*;
+
+public class SolicitacaoTest  extends TestCase
+{
+	public void testCostrutor ()
+	{
+		Solicitacao solicitacao;
+		
+		solicitacao = new S 
+	}
+}

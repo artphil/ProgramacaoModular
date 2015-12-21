@@ -1,0 +1,54 @@
+package Servicos;
+
+import Pessoas.Cliente;
+
+public class Solicitacao {
+
+	private static int serial;
+	private int numero;
+	private Cliente cliente;
+	
+	public Solicitacao()
+	{
+		setNumero(++serial);
+	}
+
+	public Solicitacao(Cliente cliente) 
+	{
+		this();
+		this.cliente = cliente;
+	}
+
+	/* Funções Get */
+	public Cliente getCliente()
+	{
+		return cliente;
+	}
+
+	public static int getSerial() 
+	{
+		return serial;
+	}
+
+	public int getNumero() 
+	{
+		return numero;
+	}
+
+	/* Funções Set */
+	
+	public void setCliente(Cliente cliente)
+	{
+		this.cliente = cliente;
+	}
+	
+	public void setSerial(int serial) 
+	{
+		Solicitacao.serial = serial;
+	}
+
+	public void setNumero(int numero) 
+	{
+		this.numero = numero;
+	}
+}

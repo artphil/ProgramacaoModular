@@ -1,0 +1,19 @@
+package Servicos;
+
+import Pessoas.Cliente;
+
+public class Solicitacao {
+
+	private Cliente cliente;
+	
+
+	public Solicitacao(Cliente cliente) 
+	{
+		this.cliente = cliente;
+	}
+
+	public Cliente getCliente()
+	{
+		return cliente;
+	}
+}

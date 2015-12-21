@@ -1,0 +1,28 @@
+package Tests;
+
+import Pessoas.*;
+import junit.framework.*;
+
+public class EmpregadoTeste extends TestCase 
+{
+
+public static Empregado pessoa;
+	
+	
+	public TesteEmpregado ()
+	{
+		pessoa = new Empregado ();
+		pessoa.setNome("João do Carmo");
+		pessoa.setEndereco("Rua Araribá, 131");
+		pessoa.setCPF("321.654.987-88");
+		pessoa.setDataNasc("20/11/1956");
+		pessoa.setEmail("joao@domain.com");
+		pessoa.setIdentidade("MG16.654.98");
+		pessoa.setTelefone("96546-5485");
+	}
+	
+	public void imprime()
+	{
+		System.out.println( pessoa.toString() );
+	}
+}
